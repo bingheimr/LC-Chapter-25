@@ -1,0 +1,45 @@
+<!-- A form submission is triggered by clicking a button inside the form. 
+
+    A submit button can be an input element with type=submit or a button element. 
+    
+    Both button types are in the below example. -->
+<body>
+    <p>Example 1</p>
+<form>
+   <label>Username <input type="text" name="username"></label>
+   <!-- clicking either of these will cause a form submission -->
+   <p>Two button examples.</p>
+   <input type="submit"/>
+   <button>Submit</button>
+</form>
+</body>
+
+<!-- When a form is submitted, an HTTP request is sent to the location set in the 'action' attribute of the '<form>' tag.
+
+If the 'action' attribute is not present or is empty, then the form will submit to the URL of the current page. -->
+
+<html>
+   <head>
+      <title>Form Example</title>
+      <style>
+         body { padding: 25px;}
+      </style>
+   </head>
+   <body>
+       <p>Example 2</p>
+      <form action="">
+         <label>Username <input type="text" name="username"></label>
+         <label>Team Name <input type="text" name="team"></label>
+         <button>Submit</button>
+      </form>
+   </body>
+</html>
+
+<!-- http://127.0.0.1:5500/25.2.1%20Trigger%20Form%20Submission.html?username=bingheimr&team=Team+Force -->
+
+<!-- The web address is the same as the form we loaded, but now includes a query parameter for every input, 
+    with a name, in the form. These parameters are known as the query string parameters. The form values 
+    are submitted via the query string because the default submission type for forms is GET. In the next 
+    section, we will soon learn how to submit form data via POST. -->
+
+    <!-- Since spaces are not allowed in URLs, the browser replaces them with +. -->

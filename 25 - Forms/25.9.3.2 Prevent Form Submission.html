@@ -1,0 +1,40 @@
+<!-- Prevent Form Submission
+
+We should prevent the form submission from happening until all inputs have valid values. 
+We can use the event parameter and 'event.preventDefault()' to stop the form submission. 
+
+'event.preventDefault()' prevents default browser functionality from happening, like form 
+submission when <button> tags are clicked inside of a form. Remember that event handler 
+functions are passed an 'event' argument which represents the event that the handler is responding to. 
+-->
+
+<html>
+    <head>
+       <title>Form Validation</title>
+       <style>
+          label {display: block;}
+          body {padding: 25px;}
+       </style>
+    </head>
+    <script>
+        window.addEventListener("load", function() {
+           let form = document.querySelector("form");
+           form.addEventListener("submit", function(event) {
+              let usernameInput = document.querySelector("input[name=username]");
+              let teamName = document.querySelector("input[name=team]");
+              if (usernameInput.value === "" || teamName.value === "") {
+                alert("All fields are required!");
+                // stop the form submission
+                event.preventDefault();
+              }
+           });
+        });
+     </script>
+    <body>
+       <form method="POST" action="https://handlers.education.launchcode.org/request-parrot">
+          <label>Username <input type="text" name="username"></label>
+          <label>Team Name <input type="text" name="team"></label>
+          <button>Submit</button>
+       </form>
+    </body>
+</html>

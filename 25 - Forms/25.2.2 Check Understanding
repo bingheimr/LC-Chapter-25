@@ -1,0 +1,7 @@
+What must be added to a form to enable submission?
+
+A: A form submission is triggered by clicking a button inside the form.
+
+By default, are HTTP forms submitted with GET or POST?
+
+A: GET

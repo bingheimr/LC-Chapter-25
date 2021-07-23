@@ -1,0 +1,38 @@
+<!-- A checkbox input represents a box to check. 
+    
+    Checkbox inputs can be used by themselves or in groups. 
+    
+   * Checkbox inputs are best used with <label> tags. *
+
+ -->
+
+ <!-- Type	            Syntax	                                Description	
+    checkbox	<input type="checkbox" name="signUp"/>	    A small box for marking form option as checked. -->
+
+<!-- EXAMPLES: 
+One checkbox. No value attribute is set, so the default value of on is submitted.-->
+
+<label>crew<input type="checkbox" name="crewReady"/></label>
+
+<!-- Submitted (if checked) -->
+<!-- crewReady=on -->
+
+<!-- Multiple checkbox inputs. All with different name attributes.-->
+
+<div>Activities</div>
+<label>cooking<input type="checkbox" name="cooking"/></label>
+<label>running<input type="checkbox" name="running"/></label>
+<label>movies<input type="checkbox" name="movies"/></label>
+
+<!-- Submitted (if checked) -->
+<!-- cooking=on&movies=on -->
+
+<!-- Multiple checkbox inputs with the SAME name attribute.-->
+
+<div>Ingredients</div>
+<label>Onion<input type="checkbox" name="ingredient" value="onion"/></label>
+<label>Butter<input type="checkbox" name="ingredient" value="butter"/></label>
+<label>Rice<input type="checkbox" name="ingredient" value="rice"/></label>
+
+<!-- Submitted (if checked) -->
+<!-- ingredient=butter&ingredient=rice -->

@@ -1,0 +1,3 @@
+For a select input, what determines the value that is submitted during form submission?
+
+A: The 'value' attribute which defines the value submitted if that option is selected.

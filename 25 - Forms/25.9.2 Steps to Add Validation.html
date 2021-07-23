@@ -1,0 +1,41 @@
+<!-- 
+
+    Steps to Add Validation 
+    1. Add an event handler for the window load event
+    2. Within the window's load handler, add an event handler for the form submit event
+    3. Retrieve input values that need to be validated from the DOM.
+    4. Within the form's submit handler, check the input values using conditional statements
+        a. If the values are valid, allow the form submission
+        b. If the values are NOT valid, inform the user and STOP form submission
+
+
+Each of these steps involves additional details, which we will now break down.
+
+-->
+
+<!-- EXAMPLE: Let's start this by showing an alert box when the form submit event is triggered. -->
+
+<html>
+   <head>
+      <title>Form Validation</title>
+      <style>
+         label {display: block;}
+         body {padding: 25px;}
+      </style>
+   </head>
+   <script>
+      window.addEventListener("load", function() {
+         let form = document.querySelector("form");
+         form.addEventListener("submit", function(event) {
+            alert("submit clicked");
+         });
+      });
+   </script>
+   <body>
+      <form method="POST" action="https://handlers.education.launchcode.org/request-parrot">
+         <label>Username <input type="text" name="username"></label>
+         <label>Team Name <input type="text" name="team"></label>
+         <button>Submit</button>
+      </form>
+   </body>
+</html>

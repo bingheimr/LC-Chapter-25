@@ -1,0 +1,7 @@
+What attribute on <form> determines if the form is submitted with GET or POST?
+
+A: 'method' attribute
+
+What attribute on <form> determines where the request is sent?
+
+A: 'action' attribute

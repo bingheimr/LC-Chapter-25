@@ -1,0 +1,8 @@
+What is the purpose of the name attribute for input elements?
+
+A: The name attribute is used to identify the input's value when the data is submitted
+
+
+Which input attribute sets the default value?
+
+A: The value attribute of an <input> tag can be used to set the default value.

@@ -1,0 +1,20 @@
+<!-- The 'action' and 'method' attributes allows us to choose where the form 
+    request will be sent and what type of request will be sent. How do we 
+    configure what happens in response to a form submission?
+
+    Form handlers are web server actions that receive, inspect, and process requests. 
+    They then send a response to the client. 
+    For this unit we are going to use form handlers that have already been created for us. -->  
+
+    <!-- EXAMPLE: When submitted, this form will send a POST request to the form handler defined by the action attribute. -->
+
+<form action="https://handlers.education.launchcode.org/request-parrot" method="POST">
+   <label>Username <input type="text" name="username"></label>
+   <label>Team Name <input type="text" name="team"></label>
+   <button>Submit</button>
+</form>
+
+<!-- WARNING: Using POST for form submissions adds a very low level of security. 
+    Using HTTPS instead of HTTP adds a higher level of security. 
+    
+    Configuring HTTPS is beyond the scope of this class.-->

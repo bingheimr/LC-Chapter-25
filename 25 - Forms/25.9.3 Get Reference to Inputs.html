@@ -1,0 +1,36 @@
+<!-- Get Reference to Inputs
+
+To validate what the user has typed, we can get a reference to the 'input' elements 
+in the DOM and check the 'value' property of each. 
+
+Let's change the submit event handler to display the value of the username input in an alert box. 
+
+To do that, we are going to use 'document.querySelector("input[name=username]")', 
+which uses an attribute selector to select the '<input>' that has 'name="username"'.-->
+
+<html>
+    <head>
+       <title>Form Validation</title>
+       <style>
+          label {display: block;}
+          body {padding: 25px;}
+       </style>
+    </head>
+    <script>
+        window.addEventListener("load", function() {
+           let form = document.querySelector("form");
+           form.addEventListener("submit", function(event) {
+              let usernameInput = document.querySelector("input[name=username]");
+              // alert the current value found in the username input
+              alert("username: " + usernameInput.value);
+           });
+        });
+     </script>
+    <body>
+       <form method="POST" action="https://handlers.education.launchcode.org/request-parrot">
+          <label>Username <input type="text" name="username"></label>
+          <label>Team Name <input type="text" name="team"></label>
+          <button>Submit</button>
+       </form>
+    </body>
+</html>

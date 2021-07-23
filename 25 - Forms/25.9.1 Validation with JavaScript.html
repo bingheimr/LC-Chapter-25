@@ -1,0 +1,46 @@
+<!-- 
+
+Form Inputs and the DOM
+    
+Before we can validate what the user has typed we need to understand how to use form inputs with the DOM. 
+
+Remember that the DOM is a JavaScript representation of the HTML document. 
+
+'<input>' tags can be selected and referenced like any other HTML element.
+
+To read the value of an 'input', we can check the 'value' attribute. 
+
+We can also assign a new value to 'input.value' which will update the value shown in the input.
+-->
+
+<!-- EXAMPLE: This example will log the value of an input, update the input's value, and then log it again when the button is clicked.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Check input value with DOM</title>
+</head>
+<body>
+   <form>
+      <label>Language
+         <input type="text" name="language" id="language" value="JavaScript">
+      </label>
+   </form>
+   <button id="update">Update Input Value</button>
+   <script>
+      let button = document.getElementById("update");
+      // add event handler for when button clicked
+      button.addEventListener("click", function() {
+         let input = document.getElementById("language");
+         console.log(input.value);
+         // now update the value in the input
+         input.value = input.value + " rocks!";
+         console.log(input.value);
+      });
+   </script>
+</body>
+</html>
+
+<!-- QUESTION: What happens when you click the button multiple times?
+     A: "rocks!" is added each time
+ -->

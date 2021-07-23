@@ -1,0 +1,3 @@
+What method on the event object can be used to stop a form submission?
+
+A: event.preventDefault() prevents default browser functionality from happening.
